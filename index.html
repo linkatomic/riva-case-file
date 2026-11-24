@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Riva Case File</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1d2330;--mut:#5b6474;--line:#dde1e7;--acc:#2456a6;--red:#b42318;--redbg:#fdf0ef;--amb:#9a5b00;--ambbg:#fff7e6;--grn:#1f7a3a;--grnbg:#edf7ef;--th:#f0f2f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11141a;--card:#1a1e26;--fg:#e6e8ec;--mut:#9aa3b2;--line:#2c323d;--acc:#7aa7f0;--red:#ff8a80;--redbg:#3a1d1b;--amb:#f2b860;--ambbg:#352a16;--grn:#7bd391;--grnbg:#16301f;--th:#222833}}
+:root[data-theme="dark"]{--bg:#11141a;--card:#1a1e26;--fg:#e6e8ec;--mut:#9aa3b2;--line:#2c323d;--acc:#7aa7f0;--red:#ff8a80;--redbg:#3a1d1b;--amb:#f2b860;--ambbg:#352a16;--grn:#7bd391;--grnbg:#16301f;--th:#222833}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+header{background:var(--card);border-bottom:1px solid var(--line);padding:22px 16px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+header .wrap{padding:0}
+h1{margin:0;font-size:26px}h2{font-size:21px;margin:0 0 12px}h3{font-size:17px;margin:18px 0 8px}
+.sub{color:var(--mut);margin-top:4px}
+nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav a{display:inline-block;padding:10px 12px;color:var(--acc);text-decoration:none;font-size:14px}
+nav a:hover{text-decoration:underline}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;margin:18px 0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.facts div{background:var(--th);border-radius:8px;padding:8px 10px}.facts b{display:block;font-size:12px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.flag{border-left:4px solid;padding:10px 14px;border-radius:6px;margin:8px 0}
+.r{background:var(--redbg);border-color:var(--red)}.a{background:var(--ambbg);border-color:var(--amb)}.g{background:var(--grnbg);border-color:var(--grn)}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:var(--th)}
+.hi{color:var(--red);font-weight:700}.lo{color:var(--acc);font-weight:700}
+.quote{font-family:Georgia,serif;background:var(--th);border-radius:6px;padding:10px 14px;margin:8px 0;white-space:pre-line}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.gal figure{margin:0;background:#000;border-radius:6px;overflow:hidden;cursor:zoom-in;border:1px solid var(--line)}
+.gal img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+.gal figcaption{background:var(--card);color:var(--fg);font-size:13px;padding:5px 8px}
+.big{cursor:zoom-in;width:100%;border-radius:6px;border:1px solid var(--line);display:block}
+.docs a{display:inline-block;margin:4px 6px 4px 0;padding:8px 12px;border:1px solid var(--line);border-radius:6px;color:var(--acc);text-decoration:none;background:var(--th);font-size:14px}
+.note{color:var(--mut);font-size:13.5px}
+.tl{border-left:3px solid var(--line);margin-left:6px;padding-left:16px}
+.tl div{margin:0 0 12px;position:relative}.tl div:before{content:"";position:absolute;left:-23px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--acc)}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:50;flex-direction:column}
+#lb.on{display:flex}#lb img{max-width:96vw;max-height:84vh}
+#lb p{color:#eee;margin:10px 16px;text-align:center;font-size:14px}
+#lb button{position:absolute;background:rgba(255,255,255,.15);color:#fff;border:0;font-size:26px;width:46px;height:46px;border-radius:50%;cursor:pointer}
+#lbx{top:14px;right:14px}#lbp{left:10px;top:50%}#lbn{right:10px;top:50%}
+footer{color:var(--mut);font-size:13px;text-align:center;padding:20px 16px 40px}
+@media print{nav,#lb{display:none!important}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Riva: case file for second opinion</h1>
+<div class="sub">Canine · Lhasa Apso · Female entire · 8 years 1 month · Patient #7184 at Dr. Chirag Dave's Pets' Clinic, Ahmedabad</div>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#summary">Summary</a><a href="#timeline">Timeline</a><a href="#meds">Current treatment</a><a href="#xray">Radiograph</a><a href="#us">Ultrasound</a><a href="#urine">Urinalysis</a><a href="#blood">Haematology &amp; chemistry</a><a href="#docs">Original reports</a><a href="#questions">Open questions</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="summary">
+<h2>1. Summary of findings (23 Nov 2026)</h2>
+<div class="facts">
+<div><b>Patient</b>Riva</div><div><b>Species / breed</b>Canine, Lhasa Apso</div><div><b>Sex</b>Female, entire (not spayed)</div><div><b>Age</b>8 y 1 m</div><div><b>Referring vet</b>Dr. Chirag Dave</div><div><b>Diagnostics date</b>23 Nov 2026</div>
+</div>
+<p class="note">Riva is being treated for cancer and is on toceranib (see §3). The primary tumour type and site are not stated in these reports; the treating vet can confirm them.</p>
+<div class="flag r"><b>Thorax (radiograph):</b> numerous "cotton-ball" radiodense opacities. Reported as <i>"masses? metastasis?"</i>. Cardiac silhouette normal.</div>
+<div class="flag r"><b>Urinary bladder (US + radiograph):</b> hyperechoic structure about 0.91 cm thick, firmly adherent to the bladder wall. Differential: mural mass or organised blood clot, not yet confirmed. Radiodense shadow within the bladder on the radiograph.</div>
+<div class="flag a"><b>Urinalysis:</b> haematuria (blood ++, RBC 20–100/HPF), proteinuria +, struvite crystalluria, isosthenuric/hyposthenuric urine (USG 1.007–1.008). No pyuria, nitrite negative.</div>
+<div class="flag a"><b>Renal:</b> SDMA 16 µg/dL (ref 0–14; 10 in Oct). Creatinine 1.1 mg/dL (within reference). Left kidney: marginal reduction in corticomedullary differentiation.</div>
+<div class="flag a"><b>Haematology:</b> leukocytosis 20.27 K/µL with neutrophilia (15.96) and monocytosis (2.35). Up from WBC 11.23 in Oct.</div>
+<div class="flag a"><b>Liver (US):</b> normal size; scattered patchy hyperechoic areas. Liver enzymes normal.</div>
+<div class="flag g"><b>Unremarkable:</b> cardiac silhouette, spleen, gallbladder, right kidney, erythron (no anaemia), platelet count, liver enzymes, electrolytes, glucose, calcium.</div>
+</section>
+
+<section id="timeline">
+<h2>2. Timeline</h2>
+<div class="tl">
+<div><b>22 Oct 2026:</b> Previous IDEXX blood panel and urinalysis (values shown for comparison in §7).</div>
+<div><b>23 Nov 2026, about 14:29:</b> Abdominal ultrasound and radiograph (lateral views of abdomen and thorax).</div>
+<div><b>23 Nov 2026, 14:43–15:05:</b> Urinalysis (IDEXX in-clinic, plus outside lab with microscopy). IDEXX CBC and chemistry.</div>
+<div><b>24 Nov 2026:</b> Treatment as listed in §3.</div>
+</div>
+</section>
+
+<section id="meds">
+<h2>3. Current treatment (as prescribed, 24 Nov 2026)</h2>
+<div class="tbl"><table>
+<tr><th>Product</th><th>Active ingredient</th><th>Dose and frequency (vet's written instruction)</th></tr>
+<tr><td>Tocerapet-15</td><td>Toceranib phosphate 15 mg</td><td>1.5 tablets (22.5 mg) after food, Mon / Wed / Fri</td></tr>
+<tr><td>Toxo-Mox 250</td><td>Amoxicillin + clavulanate</td><td>½ tablet every 12 h, after food</td></tr>
+<tr><td>MPS Liposomal Apigenin 500</td><td>Apigenin with fisetin, quercetin, theaflavins, resveratrol</td><td>1 tablet every 24 h</td></tr>
+<tr><td>CystoPro (Protexin)</td><td>Urinary tract support supplement</td><td>1 capsule every 24 h, sprinkled on food</td></tr>
+<tr><td>SynFOSium (Vivaldis)</td><td>Prebiotic + probiotic</td><td>1 capsule every 24 h, sprinkled on food</td></tr>
+<tr><td>PinPoint lotion</td><td>Silver nanoparticles (topical, wound)</td><td>4 times a day</td></tr>
+<tr><td>Cortavance</td><td>Hydrocortisone aceponate 0.584 mg/mL (topical)</td><td>Twice a day</td></tr>
+</table></div>
+<p class="note">Body weight isn't recorded in these documents, so the dose in mg/kg can't be worked out here. The site being treated with the topical sprays isn't documented either.</p>
+<h3>Photos of the medicine packs with the vet's handwritten instructions</h3>
+<div class="gal" id="medgal"></div>
+</section>
+
+<section id="xray">
+<h2>4. Radiograph: lateral abdomen and thorax</h2>
+<img class="big" data-cap="Radiograph, 23 Nov 2026. Top: lateral abdomen. Bottom: lateral thorax and cranial abdomen." src="files/xray/xray-lateral-abdomen-thorax.jpg" alt="Lateral radiographs of abdomen and thorax">
+<p class="note">Tap the image to enlarge it. The film label reads "Abdomen right lateral"; the lower view shows the thorax.</p>
+<h3>Report (verbatim)</h3>
+<div class="quote">1. Cardiac silhouette appears to be normal.
+2. Numerous cotton ball like radiodense shadows are noticed in the thorax = masses? - metastasis?
+3. The stomach appears to be partially full.
+4. Intermittently filled small bowel loops.
+5. Fecal matter noticed in the colon.
+6. The urinary bladder appears to be partially full - shows a radiodense shadow within - needs further confirmation.</div>
+</section>
+
+<section id="us">
+<h2>5. Abdominal ultrasound</h2>
+<h3>Report (verbatim)</h3>
+<div class="quote">1. Urinary Bladder: A distinct, approximately 0.91 cm thick hyperechoic structure is observed, firmly adherent to the urinary bladder wall. The appearance raises suspicion of a mural mass or an organized blood clot ?? - Needs further confirmation. It appears firmly attached to the bladder wall.
+2. Left Kidney: Normal in shape and size, with preserved parenchymal architecture. There is a marginal reduction in corticomedullary differentiation.
+3. Right Kidney: Normal in shape and size, with normal parenchymal architecture and preserved corticomedullary differentiation.
+4. Liver: Appears normal in size and overall echogenicity. Scattered patchy hyperechoic areas are noted within the hepatic parenchyma.
+5. Gall Bladder: Normal in appearance, with a normal wall thickness. No intraluminal sludge is observed.
+6. Spleen: The splenic parenchyma appears normal, with no obvious abnormalities.</div>
+<h3>Images (24, in acquisition order)</h3>
+<p class="note">The machine date reads 01-01-2009 because its clock was wrong; the scan is from 23 Nov 2026. Only frames 1, 13, 15, 16, 19 and 22 have an organ label on screen. The other organ labels below are inferred from the order the images were taken.</p>
+<div class="gal" id="usgal"></div>
+</section>
+
+<section id="urine">
+<h2>6. Urinalysis (23 Nov 2026)</h2>
+<div class="tbl"><table>
+<tr><th>Parameter</th><th>Outside lab (microscopy)</th><th>IDEXX in-clinic</th><th>Reference</th><th>IDEXX 22 Oct</th></tr>
+<tr><td>Collection</td><td></td><td>Free catch</td><td></td><td></td></tr>
+<tr><td>Colour / clarity</td><td>Colourless / clear</td><td>Straw / clear</td><td>Yellow / clear</td><td>Dark yellow</td></tr>
+<tr><td>Specific gravity</td><td class="hi">1.007</td><td class="hi">1.008</td><td>1.015–1.045</td><td>1.065</td></tr>
+<tr><td>pH</td><td>7.5</td><td>5.0</td><td>5.5–7.5</td><td></td></tr>
+<tr><td>Blood</td><td class="hi">Positive ++</td><td class="hi">10 (trace)</td><td>Negative</td><td></td></tr>
+<tr><td>Protein</td><td class="hi">Positive +</td><td>Negative</td><td>Negative to +</td><td></td></tr>
+<tr><td>Glucose / ketones / bilirubin</td><td>Negative</td><td>Negative</td><td>Negative</td><td></td></tr>
+<tr><td>Nitrite / leukocytes</td><td>Negative / negative</td><td>Leukocyte esterase negative</td><td>Negative</td><td></td></tr>
+<tr><td>RBC /HPF</td><td class="hi">20–100</td><td></td><td>&lt;5</td><td></td></tr>
+<tr><td>WBC /HPF</td><td>&lt;5</td><td></td><td>&lt;5</td><td></td></tr>
+<tr><td>Epithelial cells</td><td>Squamous and transitional</td><td></td><td>Few</td><td></td></tr>
+<tr><td>Crystals</td><td class="hi">Struvite (magnesium ammonium phosphate)</td><td></td><td>Few phosphate</td><td></td></tr>
+<tr><td>Casts</td><td>None</td><td></td><td>None</td><td></td></tr>
+</table></div>
+<p class="note">The outside lab report was signed by Dr Vaishnavi A Patel, M.V.Sc. Veterinary Pathology. IDEXX comment: "Potentially inappropriate concentration: consider hydration status and, if persistent and inappropriate, renal disease, endocrinopathies, and medications." The pH and blood readings differ between the two analyses (7.5 vs 5.0, ++ vs trace). This may reflect different samples or methods; check with the treating vet.</p>
+</section>
+
+<section id="blood">
+<h2>7. Haematology and chemistry (IDEXX ProCyte One / Catalyst One)</h2>
+<h3>Haematology</h3>
+<div class="tbl"><table>
+<tr><th>Test</th><th>23 Nov 2026</th><th>Reference</th><th>22 Oct 2026</th></tr>
+<tr><td>RBC</td><td>7.81 M/µL</td><td>5.60–9.21</td><td>6.33</td></tr>
+<tr><td>Haematocrit</td><td>47.6 %</td><td>36.6–61.1</td><td>38.2</td></tr>
+<tr><td>Haemoglobin</td><td>18.6 g/dL</td><td>12.4–22.0</td><td>18.5</td></tr>
+<tr><td>MCV</td><td>61.0 fL</td><td>57.6–75.2</td><td>60.3</td></tr>
+<tr><td>MCH</td><td>23.8 pg</td><td>20.1–27.6</td><td>29.3</td></tr>
+<tr><td>MCHC</td><td>39.1 g/dL</td><td>31.9–39.3</td><td>&gt;48.5</td></tr>
+<tr><td>RDW</td><td>20.8 %</td><td>13.7–22.1</td><td>18.9</td></tr>
+<tr><td>Reticulocytes</td><td>23.4 K/µL (0.3 %)</td><td>10.0–110.0</td><td>19.9</td></tr>
+<tr><td>WBC</td><td class="hi">20.27 K/µL ↑</td><td>5.05–18.60</td><td>11.23</td></tr>
+<tr><td>Neutrophils</td><td class="hi">15.96 K/µL ↑ (78.7 %)</td><td>2.92–13.80</td><td>8.53</td></tr>
+<tr><td>Lymphocytes</td><td>1.18 K/µL (5.8 %)</td><td>0.76–4.40</td><td>1.35</td></tr>
+<tr><td>Monocytes</td><td class="hi">2.35 K/µL ↑ (11.6 %)</td><td>0.31–1.95</td><td>0.71</td></tr>
+<tr><td>Eosinophils</td><td>0.78 K/µL (3.8 %)</td><td>0.06–1.23</td><td>0.63</td></tr>
+<tr><td>Basophils</td><td>0.00 K/µL</td><td>0.00–0.10</td><td>0.00</td></tr>
+<tr><td>Platelets</td><td>205 K/µL</td><td>148–674</td><td>366</td></tr>
+<tr><td>MPV</td><td class="hi">16.0 fL ↑</td><td>8.1–14.7</td><td>14.0</td></tr>
+<tr><td>PDW / plateletcrit</td><td>15.6 fL / 0.33 %</td><td>6.4–21.2 / 0.16–0.75</td><td>10.8 / 0.51</td></tr>
+</table></div>
+<p class="note">Analyser comment: "Monocytosis: consider inflammation (if lymphopenia, consider glucocorticoid response)."</p>
+<div class="gal" id="bloodgal"></div>
+<h3>Chemistry</h3>
+<div class="tbl"><table>
+<tr><th>Test</th><th>23 Nov 2026</th><th>Reference</th><th>22 Oct 2026</th></tr>
+<tr><td>Glucose</td><td>113 mg/dL</td><td>70–143</td><td></td></tr>
+<tr><td>SDMA</td><td class="hi">16 µg/dL ↑</td><td>0–14</td><td>10</td></tr>
+<tr><td>Creatinine</td><td>1.1 mg/dL</td><td>0.5–1.8</td><td>0.8</td></tr>
+<tr><td>Urea</td><td>18 mg/dL</td><td>7–27</td><td>12</td></tr>
+<tr><td>BUN:creatinine</td><td>17</td><td></td><td>16</td></tr>
+<tr><td>Phosphorus</td><td>3.7 mg/dL</td><td>2.5–6.8</td><td>2.9</td></tr>
+<tr><td>Calcium</td><td>9.7 mg/dL</td><td>7.9–12.0</td><td></td></tr>
+<tr><td>Sodium</td><td>157 mmol/L</td><td>144–160</td><td>153</td></tr>
+<tr><td>Potassium</td><td>3.8 mmol/L</td><td>3.5–5.8</td><td>4.6</td></tr>
+<tr><td>Na:K</td><td>41</td><td></td><td>34</td></tr>
+<tr><td>Chloride</td><td>110 mmol/L</td><td>109–122</td><td>111</td></tr>
+<tr><td>Total protein</td><td>6.4 g/dL</td><td>5.2–8.2</td><td></td></tr>
+<tr><td>Albumin</td><td>3.0 g/dL</td><td>2.2–3.9</td><td></td></tr>
+<tr><td>Globulin</td><td>3.4 g/dL</td><td>2.5–4.5</td><td></td></tr>
+<tr><td>A:G ratio</td><td>0.9</td><td></td><td></td></tr>
+<tr><td>ALT</td><td>23 U/L</td><td>10–125</td><td></td></tr>
+<tr><td>ALP</td><td>40 U/L</td><td>23–212</td><td></td></tr>
+<tr><td>GGT</td><td>4 U/L</td><td>0–11</td><td></td></tr>
+<tr><td>Total bilirubin</td><td>&lt;0.1 mg/dL</td><td>0.0–0.9</td><td></td></tr>
+<tr><td>Cholesterol</td><td>243 mg/dL</td><td>110–320</td><td></td></tr>
+<tr><td>Amylase</td><td class="lo">404 U/L ↓</td><td>500–1,500</td><td></td></tr>
+<tr><td>Lipase</td><td>268 U/L</td><td>200–1,800</td><td></td></tr>
+<tr><td>Osmolality (calc.)</td><td>312 mmol/kg</td><td></td><td></td></tr>
+</table></div>
+<p class="note">IDEXX SDMA comment: "SDMA is increased, CREA within reference interval: likely impaired GFR and kidney function. Recommended next step: evaluate complete urinalysis."</p>
+</section>
+
+<section id="docs">
+<h2>8. Original reports (PDF)</h2>
+<div class="docs">
+<a href="files/reports/radiograph-report.pdf" target="_blank" rel="noopener">Radiograph report</a>
+<a href="files/reports/ultrasound-report.pdf" target="_blank" rel="noopener">Ultrasound report</a>
+<a href="files/reports/idexx-cbc-chem-ua.pdf" target="_blank" rel="noopener">IDEXX CBC, chemistry &amp; UA (4 pages)</a>
+<a href="files/reports/urinalysis-lab-report.pdf" target="_blank" rel="noopener">Urinalysis: lab report with microscopy</a>
+<a href="files/reports/urinalysis-clinic-summary.pdf" target="_blank" rel="noopener">Urinalysis: clinic summary</a>
+</div>
+</section>
+
+<section id="questions">
+<h2>9. Questions for the reviewing vet</h2>
+<ol>
+<li>Do the thoracic opacities fit pulmonary metastasis? Are further views (VD/DV, left lateral) or CT advisable?</li>
+<li>Bladder lesion: mural neoplasm vs organised clot. What is the best next step (repeat US, Doppler, cystoscopy, traumatic catheter sample, cytology)?</li>
+<li>Rising SDMA (10 to 16), dilute urine and proteinuria while on toceranib: should UPC and blood pressure be monitored, and how often?</li>
+<li>Do the leukocytosis and monocytosis need further work-up beyond the current antibiotic course?</li>
+<li>Is the current toceranib dose and schedule (22.5 mg Mon/Wed/Fri) appropriate for her weight and kidney values?</li>
+<li>Struvite crystalluria: is any dietary change advised?</li>
+</ol>
+</section>
+
+</main>
+<footer>Compiled by Riva's family from the reports issued by Dr. Chirag Dave's Pets' Clinic and IDEXX, 23 Nov 2026. The original PDFs in §8 are the source of truth.</footer>
+
+<div id="lb" role="dialog" aria-modal="true"><button id="lbx" aria-label="Close">×</button><button id="lbp" aria-label="Previous">‹</button><img alt=""><p></p><button id="lbn" aria-label="Next">›</button></div>
+
+<script>
+const US=[["01","bladder","labelled UB"],["02","bladder"],["03","bladder","measurement"],["04","bladder"],["05","bladder"],["06","bladder"],["07","bladder"],["08","bladder"],["09","bladder"],["10","bladder"],["11","bladder"],["12","bladder"],["13","left-kidney","labelled LT KID, measured"],["14","left-kidney"],["15","liver","labelled"],["16","gallbladder","labelled GB"],["17","liver"],["18","liver"],["19","spleen","labelled"],["20","spleen"],["21","spleen"],["22","right-kidney","labelled RT KID"],["23","right-kidney","measured"],["24","right-kidney"]];
+const MEDS=[["tocerapet-15","Tocerapet-15 (toceranib)"],["toxo-mox-250","Toxo-Mox 250 (amoxicillin-clavulanate)"],["mps-apigenin-500","MPS Liposomal Apigenin 500"],["cystopro","CystoPro"],["synfosium","SynFOSium"],["pinpoint-spray","PinPoint lotion"],["cortavance-spray","Cortavance spray"]];
+const nice=s=>s.replace("-"," ").replace(/^./,c=>c.toUpperCase());
+function fig(src,cap){return `<figure><img loading="lazy" src="${src}" alt="${cap}" data-cap="${cap}"><figcaption>${cap}</figcaption></figure>`}
+document.getElementById("usgal").innerHTML=US.map(([n,o,x])=>fig(`files/ultrasound/us-${n}-${o}.jpg`,`#${+n} ${nice(o)}${x?" ("+x+")":""}`)).join("");
+document.getElementById("medgal").innerHTML=MEDS.map(([f,c])=>fig(`files/meds/${f}.jpg`,c)).join("");
+document.getElementById("bloodgal").innerHTML=fig("files/blood/idexx-rbc-dotplot.png","IDEXX dot plot 1")+fig("files/blood/idexx-wbc-dotplot.png","IDEXX dot plot 2");
+const lb=document.getElementById("lb"),li=lb.querySelector("img"),lp=lb.querySelector("p");let set=[],k=0;
+function show(){li.src=set[k].src;lp.textContent=set[k].dataset.cap+(set.length>1?`  (${k+1}/${set.length})`:"")}
+document.addEventListener("click",e=>{const t=e.target.closest(".gal img,img.big");if(!t)return;const g=t.closest(".gal");set=g?[...g.querySelectorAll("img")]:[t];k=set.indexOf(t);show();lb.classList.add("on")});
+const mv=d=>{k=(k+d+set.length)%set.length;show()};
+document.getElementById("lbx").onclick=()=>lb.classList.remove("on");
+document.getElementById("lbp").onclick=e=>{e.stopPropagation();mv(-1)};
+document.getElementById("lbn").onclick=e=>{e.stopPropagation();mv(1)};
+lb.addEventListener("click",e=>{if(e.target===lb)lb.classList.remove("on")});
+document.addEventListener("keydown",e=>{if(!lb.classList.contains("on"))return;if(e.key==="Escape")lb.classList.remove("on");if(e.key==="ArrowRight")mv(1);if(e.key==="ArrowLeft")mv(-1)});
+</script>
+</body>
+</html>
