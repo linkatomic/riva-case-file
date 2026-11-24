@@ -79,7 +79,7 @@ footer{color:var(--mut);font-size:13px;text-align:center;padding:20px 16px 40px}
 <h2>2. Timeline</h2>
 <div class="tl">
 <div><b>22 Oct 2026:</b> Previous IDEXX blood panel and urinalysis (values shown for comparison in §7).</div>
-<div><b>23 Nov 2026, about 14:29:</b> Abdominal ultrasound and radiograph (lateral views of abdomen and thorax).</div>
+<div><b>23 Nov 2026, about 14:29:</b> Abdominal ultrasound (24 still images and 1 cine loop) and radiograph (lateral views of abdomen and thorax).</div>
 <div><b>23 Nov 2026, 14:43–15:05:</b> Urinalysis (IDEXX in-clinic, plus outside lab with microscopy). IDEXX CBC and chemistry.</div>
 <div><b>24 Nov 2026:</b> Treatment as listed in §3.</div>
 </div>
@@ -124,9 +124,14 @@ footer{color:var(--mut);font-size:13px;text-align:center;padding:20px 16px 40px}
 4. Liver: Appears normal in size and overall echogenicity. Scattered patchy hyperechoic areas are noted within the hepatic parenchyma.
 5. Gall Bladder: Normal in appearance, with a normal wall thickness. No intraluminal sludge is observed.
 6. Spleen: The splenic parenchyma appears normal, with no obvious abnormalities.</div>
-<h3>Images (24, in acquisition order)</h3>
+<h3>Still images (24, in acquisition order)</h3>
 <p class="note">The machine date reads 01-01-2009 because its clock was wrong; the scan is from 23 Nov 2026. Only frames 1, 13, 15, 16, 19 and 22 have an organ label on screen. The other organ labels below are inferred from the order the images were taken.</p>
 <div class="gal" id="usgal"></div>
+<h3>Cine loop (video, 6 seconds)</h3>
+<video controls playsinline loop muted preload="metadata" poster="files/video/us-cine-loop-poster.jpg" style="width:100%;max-width:800px;display:block;border-radius:6px;border:1px solid var(--line);background:#000">
+<source src="files/video/us-cine-loop.mp4" type="video/mp4">
+</video>
+<p class="note">Clip 22 in the original sequence (machine time 12:17:55, recorded between still images 21 and 22). It has no organ label on screen. The fluid-filled structure near the probe looks like the urinary bladder, but the treating vet should confirm. Converted from the original AVI to MP4 for web playback; the image itself is unchanged.</p>
 </section>
 
 <section id="urine">
